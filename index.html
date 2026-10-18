@@ -5,14 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AntiLOSE</title>
     <style>
-        /* Убираем отступы и задаём базовые параметры */
+        /* Базовые параметры страницы */
         body {
             margin: 0;
             padding: 0;
-            background-color: #050505; /* Почти чёрный фон для глубины */
-            /* Создаём паттерн из красных точек с помощью радиального градиента */
-            background-image: radial-gradient(#ff1a1a 1.5px, transparent 1.5px);
-            background-size: 30px 30px; /* Расстояние между точками */
+            background-color: #000000; /* Сплошной чёрный фон, без точек */
             color: #ffffff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
@@ -21,23 +18,63 @@
             justify-content: center;
             height: 100vh;
             text-align: center;
+            position: relative; /* Для позиционирования кнопок сверху */
         }
 
-        /* Стиль заголовка */
+        /* Контейнер для кнопок в правом верхнем углу */
+        .top-right-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 12px;
+        }
+
+        /* Стиль для кнопок TG и DS */
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 18px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #111111;
+            border: 1px solid #333333;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        /* Эффекты при наведении на социальные кнопки */
+        .social-btn.tg:hover {
+            background-color: #229ED9; /* Цвет Telegram */
+            border-color: #229ED9;
+            box-shadow: 0 0 15px rgba(34, 158, 217, 0.4);
+        }
+
+        .social-btn.ds:hover {
+            background-color: #5865F2; /* Цвет Discord */
+            border-color: #5865F2;
+            box-shadow: 0 0 15px rgba(88, 101, 242, 0.4);
+        }
+
+        /* Стиль главного заголовка */
         h1 {
             font-size: 4rem;
             margin: 0 0 2rem 0;
-            letter-spacing: 6px;
-            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-transform: none; /* Сохраняем оригинальный регистр AntiLOSE */
             /* Красное неоновое свечение */
             text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.4);
         }
 
-        /* Стиль кнопки */
+        /* Стиль главной кнопки загрузки */
         .download-btn {
             display: inline-block;
-            padding: 16px 48px;
-            font-size: 1.2rem;
+            padding: 18px 50px;
+            font-size: 1.1rem;
             font-weight: bold;
             color: #ffffff;
             background-color: #cc0000;
@@ -50,7 +87,7 @@
             letter-spacing: 1px;
         }
 
-        /* Эффект при наведении на кнопку */
+        /* Эффект при наведении на главную кнопку */
         .download-btn:hover {
             background-color: #ff0000;
             box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
@@ -67,25 +104,40 @@
         @media (max-width: 600px) {
             h1 {
                 font-size: 2.5rem;
-                letter-spacing: 3px;
+                letter-spacing: 2px;
             }
             .download-btn {
-                padding: 14px 36px;
-                font-size: 1rem;
+                padding: 16px 30px;
+                font-size: 0.95rem;
+            }
+            .top-right-buttons {
+                top: 15px;
+                right: 15px;
+                gap: 8px;
+            }
+            .social-btn {
+                padding: 6px 12px;
+                font-size: 0.85rem;
             }
         }
     </style>
 </head>
 <body>
 
+    <!-- Кнопки в правом верхнем углу -->
+    <div class="top-right-buttons">
+        <a href="https://t.me/antilose_tg" target="_blank" rel="noopener noreferrer" class="social-btn tg">TG</a>
+        <a href="https://discord.gg/DFPu8rUNxr" target="_blank" rel="noopener noreferrer" class="social-btn ds">DS</a>
+    </div>
+
+    <!-- Главный контент по центру -->
     <h1>AntiLOSE</h1>
     
-    <!-- Кнопка с вашей ссылкой на Google Диск -->
     <a href="https://drive.usercontent.google.com/download?id=1-R1mIDWXIkMFQQCcmjQTIoDk0Vj_SGXY&export=download&authuser=0" 
        class="download-btn" 
        target="_blank" 
        rel="noopener noreferrer">
-       Download
+       Download External CS2 (V0.1)
     </a>
 
 </body>
