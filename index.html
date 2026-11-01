@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AntiLOSE (Beta Site)</title>
     <style>
-        /* Базовые параметры страницы */
         body {
             margin: 0;
             padding: 0;
-            background-color: #000000; /* Сплошной чёрный фон, без точек */
+            background-color: #000000;
             color: #ffffff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
@@ -18,10 +17,9 @@
             justify-content: center;
             height: 100vh;
             text-align: center;
-            position: relative; /* Для позиционирования кнопок сверху */
+            position: relative;
         }
 
-        /* Контейнер для кнопок в правом верхнем углу */
         .top-right-buttons {
             position: absolute;
             top: 20px;
@@ -30,7 +28,6 @@
             gap: 12px;
         }
 
-        /* Стиль для кнопок TG и DS */
         .social-btn {
             display: inline-flex;
             align-items: center;
@@ -47,30 +44,47 @@
             letter-spacing: 0.5px;
         }
 
-        /* Эффекты при наведении на социальные кнопки */
         .social-btn.tg:hover {
-            background-color: #229ED9; /* Цвет Telegram */
+            background-color: #229ED9;
             border-color: #229ED9;
             box-shadow: 0 0 15px rgba(34, 158, 217, 0.4);
         }
 
         .social-btn.ds:hover {
-            background-color: #5865F2; /* Цвет Discord */
+            background-color: #5865F2;
             border-color: #5865F2;
             box-shadow: 0 0 15px rgba(88, 101, 242, 0.4);
         }
 
-        /* Стиль главного заголовка */
         h1 {
             font-size: 4rem;
             margin: 0 0 2rem 0;
             letter-spacing: 4px;
-            text-transform: none; /* Сохраняем оригинальный регистр AntiLOSE */
-            /* Красное неоновое свечение */
+            text-transform: none;
             text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.4);
         }
 
-        /* Стиль главной кнопки загрузки */
+        h2 {
+            font-size: 1rem;
+            margin: 0 0 2rem 0;
+            letter-spacing: 4px;
+            text-transform: none;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.4);
+            animation: letterSpacingPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes letterSpacingPulse {
+            0% {
+                letter-spacing: 1px;
+            }
+            50% {
+                letter-spacing: 10px;
+            }
+            100% {
+                letter-spacing: 1px;
+            }
+        }
+
         .download-btn {
             display: inline-block;
             padding: 18px 50px;
@@ -87,20 +101,17 @@
             letter-spacing: 1px;
         }
 
-        /* Эффект при наведении на главную кнопку */
         .download-btn:hover {
             background-color: #ff0000;
             box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
             transform: translateY(-3px);
         }
 
-        /* Эффект при нажатии */
         .download-btn:active {
             transform: translateY(1px);
             box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
         }
 
-        /* Адаптация для мобильных устройств */
         @media (max-width: 600px) {
             h1 {
                 font-size: 2.5rem;
@@ -124,16 +135,13 @@
 </head>
 <body>
 
-    <!-- Кнопки в правом верхнем углу -->
-    <div class="top-right-buttons">
-        <a href="https://t.me/antilose_tg" target="_blank" rel="noopener noreferrer" class="social-btn tg">TG</a>
-        <a href="https://discord.gg/DFPu8rUNxr" target="_blank" rel="noopener noreferrer" class="social-btn ds">DS</a>
-    </div>
-
-    <!-- Главный контент по центру -->
-    <h1>AntiLOSE (Beta)</h1>
-    <h2>Internal Loader Be Soon...</h2>
-    
+<div class="top-right-buttons">
+    <a href="https://t.me/antilose_tg" target="_blank" rel="noopener noreferrer" class="social-btn tg">TG</a>
+    <a href="https://discord.gg/DFPu8rUNxr" target="_blank" rel="noopener noreferrer" class="social-btn ds">DS</a>
+    <a href="https://t.me/antilose_tg/60"></a>
+</div>
+<h1>AntiLOSE (Beta)</h1>
+<h2>Internal Loader be soon...</h2>
     <a href="https://t.me/antilose_tg/60" 
        class="download-btn" 
        target="_blank" 
